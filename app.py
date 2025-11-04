@@ -73,7 +73,7 @@ if len(df_f) >= 2:
     prof_today, prof_yday = today_row["Profit"], yday_row["Profit"]
     conv_today, conv_yday = today_row["Conversion Rate"], yday_row["Conversion Rate"]
 
-    col1, col2, col3 = st.columns(3, border=True)
+    col1, col2, col3 = st.columns(3)
     with col1:
         st.metric("Revenue", f"{rev_today:,.0f}", f"{(rev_today - rev_yday):+,.0f}")
     with col2:
