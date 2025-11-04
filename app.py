@@ -8,8 +8,10 @@ import numpy as np
 st.set_page_config(
     page_title="Business KPI Dashboard",
     page_icon="📊",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"  # optional
 )
+
 
 # -----------------------------
 # Header
@@ -107,7 +109,7 @@ st.divider()
 # Data table + download
 # -----------------------------
 st.subheader("Underlying Data")
-st.dataframe(df_f.assign(Date=df_f["Date"].dt.strftime("%Y-%m-%d")))
+st.dataframe(df_f.assign(Date=df_f["Date"].dt.strftime("%Y-%m-%d")), use_container_width=True)
 csv = df_f.to_csv(index=False).encode("utf-8")
 st.download_button("Download CSV", csv, "kpi_data.csv", "text/csv")
 
