@@ -1,0 +1,36 @@
+# Ignore Power BI cache and temp files
+*.pbix~         # Backup files (auto-created by Power BI)
+*.tmp
+*.temp
+
+# Power BI auto-recovery files
+*.pbix.autosave
+
+# System files (Windows/macOS)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VSCode or editor metadata
+.vscode/
+.idea/
+
+# Python or Jupyter artifacts (if used for preprocessing)
+__pycache__/
+*.pyc
+*.ipynb_checkpoints
+
+# Node modules (if using for GitHub Pages, etc.)
+node_modules/
+
+# Environment/credentials (if using scripts)
+.env
+*.env
+
+# Excel temp and autosaves (if you preprocess with Excel)
+~$*
+
+# Output/export folders (optional)
+/exported/
+/output/
+/screenshots/
